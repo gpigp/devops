@@ -24,7 +24,7 @@ resource "aws_instance" "test-ec2-bastion" {
   associate_public_ip_address = "true"
 
   // 방화벽(보안 그룹)
-  vpc_security_group_ids = [aws_security_group.test-sg-bastion.id]
+#  vpc_security_group_ids = [aws_security_group.test-sg-bastion.id]
 
   // 스토리지 구성
   root_block_device {
@@ -37,6 +37,6 @@ resource "aws_instance" "test-ec2-bastion" {
   }
 
   // IAM 인스턴스 프로필 할당
-  iam_instance_profile = aws_iam_instance_profile.test-ec2-instance-profile.name
+#  iam_instance_profile = aws_iam_instance_profile.test-ec2-instance-profile.name
 
 }
