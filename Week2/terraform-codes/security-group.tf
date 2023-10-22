@@ -129,7 +129,7 @@ resource "aws_security_group_rule" "test-eks_sg_nodes_inbound" {
     from_port = 1025
     to_port = 65535
     protocol = "tcp"
-    description = "Allow worker Kubelets and pods to receive communication from the cluster control plane"   
+    description = "Allow worker Kubelets and pods to receive communication from the cluster control plane"
 }
 
 // - SSH 워커노드 Kubelet 및 Pod가 클러스터 컨트롤 플레인으로부터 통신을 수신하도록 허용
@@ -142,5 +142,5 @@ resource "aws_security_group_rule" "test-eks_sg_nodes_ssh_inbound" {
     from_port = 443
     to_port = 443
     protocol = "tcp"
-    description = "Allow ssh worker Kubelets and pods to receive communication from the cluster control plane"   
+    description = "Allow ssh worker Kubelets and pods to receive communication from the cluster control plane"
 }
